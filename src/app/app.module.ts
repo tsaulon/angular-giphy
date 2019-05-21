@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,8 +12,9 @@ import { AngularGiphyModule } from './modules/angular-giphy/angular-giphy.module
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AngularGiphyModule
+    HttpClientModule,
+    AngularGiphyModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
