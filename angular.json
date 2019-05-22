@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ng-giphy": {
+      "root": "projects/ng-giphy",
+      "sourceRoot": "projects/ng-giphy/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-giphy/tsconfig.lib.json",
+            "project": "projects/ng-giphy/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-giphy/src/test.ts",
+            "tsConfig": "projects/ng-giphy/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-giphy/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-giphy/tsconfig.lib.json",
+              "projects/ng-giphy/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-giphy"
