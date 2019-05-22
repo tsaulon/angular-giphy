@@ -4,8 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularGiphyModule } from './modules/angular-giphy/angular-giphy.module';
-
+import { NgGiphyModule } from '../../projects/ng-giphy/src/lib/ng-giphy.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +12,7 @@ import { AngularGiphyModule } from './modules/angular-giphy/angular-giphy.module
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularGiphyModule,
+    NgGiphyModule,
     AppRoutingModule
   ],
   providers: [],

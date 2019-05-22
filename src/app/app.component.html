@@ -2,7 +2,12 @@
 <div class="container-fluid">
     <div class="d-flex flex-column">
         <div class="gif-wrapper">
-            <app-ng-giphy API_KEY="AcQMPHVgW0gV8g9KzBJumabetGRqXBpx"></app-ng-giphy>
+            <!-- Experiment with 2-way binding using form controls and form groups. -->
+            <lib-ng-giphy
+                [API_KEY]="apiKey"
+                context="titty"
+                action="SEARCH"
+            ></lib-ng-giphy>
         </div>
     </div>
 </div>
